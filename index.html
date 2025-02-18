@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Self Love Status</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('/Users/zyamberpitts/Downloads/9353f1826f78d62eb672cd2985eeb893.png') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+            margin: 1000;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 25px;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 00 100px 100px rgba(0, 0, 0, 0.15);
+            max-width: 550px;
+            width: 100%;
+        }
+        .user-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .user-info img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 0px solid #000;
+        }
+        .user-details {
+            display: flex;
+            flex-direction: column;
+        }
+        .username {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .timestamp {
+            font-size: 14px;
+            color: #555;
+        }
+        .status {
+            font-size: 25px;
+            color: #000;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="user-info">
+            <img src="IMG_7443.JPG" alt="Profile Picture">
+            <div class="user-details">
+                <div class="username">Zy Badu</div>
+                <div class="timestamp" id="timestamp">Just now · 🌍</div>
+            </div>
+        </div>
+        <div class="status" id="status"></div>
+    </div>
+
+    <script>
+        (function() {
+            let message = "I love myself, fck what y'all nggas talking about. 💋💖⭐";
+            document.getElementById("status").innerText = message;
+
+            function updateTimestamp() {
+                const now = new Date();
+                const hours = now.getHours();
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const ampm = hours >= 12 ? 'PM' : 'AM';
+                const formattedHours = hours % 12 || 12;
+                document.getElementById("timestamp").innerText = `${formattedHours}:${minutes} ${ampm} · 🌍`;
+            }
+            updateTimestamp();
+        })();
+    </script>
+
+<script>
+    setTimeout(function() {
+      // Create a pop-up container
+      let popup = document.createElement("div");
+      popup.style.position = "fixed";
+      popup.style.top = "50%";
+      popup.style.left = "50%";
+      popup.style.transform = "translate(-50%, -50%)";
+      popup.style.background = "black";
+      popup.style.color = "white";
+      popup.style.padding = "20px";
+      popup.style.borderRadius = "10px";
+      popup.style.textAlign = "center";
+      popup.style.boxShadow = "0px 0px 10px rgba(255, 215, 0, 0.8)";
+      popup.style.zIndex = "1000";
+  
+      // Add content to the pop-up
+      popup.innerHTML = `
+        <h2>🔥 Elevate Your Style with Luxiries Archive 🔥</h2>
+        <p>Shop our exclusive jewelry collections now.</p>
+        <p>Redirecting you now...</p>
+      `;
+  
+      // Append pop-up to the body
+      document.body.appendChild(popup);
+  
+      // Redirect after 2 more seconds
+      setTimeout(function() {
+        window.location.href = "https://www.luxiriesarchv.com/necklaces";
+      }, 2000); // 2-second delay after pop-up
+    }, 3000); // 3-second delay before showing the pop-up
+  </script>
+  
+      
+</body>
+</html>
+
